@@ -1,29 +1,64 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    text-align: center;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Quiz</h2>
+
+<button id="start">Start</button>
+
+<p id="vraag"></p>
+<div id="antwoorden"></div>
+
+<p id="feedback"></p>
+<button id="volgende">Volgende</button>
+
+<script>
+let vragen = [
+    {
+        vraag: "Wat is 2 + 2?",
+        antwoorden: ["3", "4", "5"],
+        correct: 1
+    }
+];
+
+let huidigeVraag = 0;
+
+document.getElementById("start").onclick = function () {
+    toonVraag();
+};
+
+function toonVraag() {
+    let v = document.getElementById("vraag");
+    let a = document.getElementById("antwoorden");
+
+    // TODO: vraag tonen
+
+    // TODO: antwoorden maken (knoppen)
 }
 
-#quiz-container {
-    background: white;
-    width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
+function controleerAntwoord(i) {
+    let f = document.getElementById("feedback");
+
+    // TODO: juist of fout checken
+
 }
 
-button {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    cursor: pointer;
-}
+document.getElementById("volgende").onclick = function () {
+    huidigeVraag++;
 
-button:hover {
-    background-color: #ddd;
-}
+    // TODO: volgende vraag tonen
+};
+</script>
 
-#feedback {
-    font-weight: bold;
-}
+</body>
+</html>
